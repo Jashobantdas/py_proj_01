@@ -1,94 +1,20 @@
-# =========================
-# Python
-# =========================
-__pycache__/
-*$py.class
-*.so
+# Ignore everything
+*
 
-# =========================
-# Virtual Environment
-# =========================
-.venv/
-venv/
-env/
-ENV/
+# Allow directories
+!*/
 
-# =========================
-# Environment & Secrets
-# =========================
-.env
-.env.*
-!.env.example
+# Python source files
+!*.py
 
-# =========================
-# IDE
-# =========================
-.vscode/
-.idea/
-*.iml
+# Text files
+!*.txt
 
-# =========================
-# Testing / Coverage
-# =========================
-.pytest_cache/
-.coverage
-htmlcov/
-.tox/
-.nox/
+# Requirements / project files
+!requirements.txt
 
-# =========================
-# Build / Distribution
-# =========================
-build/
-dist/
-*.egg-info/
-.eggs/
+# README
+!README.md
 
-# =========================
-# Jupyter Notebook
-# =========================
-.ipynb_checkpoints/
-
-# =========================
-# Logs
-# =========================
-*.log
-logs/
-
-# =========================
-# FastAPI / Uvicorn
-# =========================
-*.pid
-
-# =========================
-# ML / GenAI
-# =========================
-*.pickle
-*.joblib
-*.h5
-*.onnx
-*.pt
-*.pth
-checkpoints/
-
-# =========================
-# Vector Databases
-# =========================
-chroma/
-chroma_db/
-*.sqlite3
-
-# =========================
-# Generated Files
-# =========================
-uploads/
-outputs/
-temp/
-tmp/
-
-# =========================
-# OS Files
-# =========================
-.DS_Store
-Thumbs.db
-desktop.ini
+# Git configuration
+!.gitignore
