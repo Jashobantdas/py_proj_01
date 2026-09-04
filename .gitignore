@@ -1,18 +1,98 @@
-# Build and Release Folders
-bin-debug/
-bin-release/
-[Oo]bj/
-[Bb]in/
+# =========================
+# Python
+# =========================
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
 
-# Other files and folders
-.settings/
+# =========================
+# Virtual Environment
+# =========================
+.venv/
+venv/
+env/
+ENV/
 
-# Executables
-*.swf
-*.air
-*.ipa
-*.apk
+# =========================
+# Environment & Secrets
+# =========================
+.env
+.env.*
+!.env.example
 
-# Project files, i.e. `.project`, `.actionScriptProperties` and `.flexProperties`
-# should NOT be excluded as they contain compiler settings and other important
-# information for Eclipse / Flash Builder.
+# =========================
+# IDE
+# =========================
+.vscode/
+.idea/
+*.iml
+
+# =========================
+# Testing / Coverage
+# =========================
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+.nox/
+
+# =========================
+# Build / Distribution
+# =========================
+build/
+dist/
+*.egg-info/
+.eggs/
+
+# =========================
+# Jupyter Notebook
+# =========================
+.ipynb_checkpoints/
+
+# =========================
+# Logs
+# =========================
+*.log
+logs/
+
+# =========================
+# FastAPI / Uvicorn
+# =========================
+*.pid
+
+# =========================
+# ML / GenAI
+# =========================
+*.pkl
+*.pickle
+*.joblib
+*.h5
+*.keras
+*.onnx
+*.pt
+*.pth
+models/
+checkpoints/
+
+# =========================
+# Vector Databases
+# =========================
+chroma/
+chroma_db/
+*.sqlite3
+
+# =========================
+# Generated Files
+# =========================
+uploads/
+outputs/
+temp/
+tmp/
+
+# =========================
+# OS Files
+# =========================
+.DS_Store
+Thumbs.db
+desktop.ini
