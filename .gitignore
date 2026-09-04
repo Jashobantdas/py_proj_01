@@ -1,1 +1,30 @@
+# Ignore everything
+*
 
+# Allow directories
+!*/
+
+# Allow Python files
+!*.py
+
+# Allow text files
+!*.txt
+
+# Allow Markdown
+!*.md
+
+# Allow Git ignore file
+!.gitignore
+
+# Explicitly ignore environment files
+.env
+.env.*
+!.env.example
+
+# Explicitly ignore virtual environments
+.venv/
+venv/
+
+# Python cache
+__pycache__/
+*.pyc
