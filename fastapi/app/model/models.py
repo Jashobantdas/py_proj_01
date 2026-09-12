@@ -1,5 +1,7 @@
+from datetime import date
+
 from configs.database import engine
-from sqlalchemy import Integer, String, Float, ForeignKey
+from sqlalchemy import Integer, String, Float, ForeignKey, Date
 from sqlalchemy.orm import Mapped, mapped_column, relationship, DeclarativeBase
 
 
@@ -42,5 +44,19 @@ class User(Base):
 
     def __repr__(self):
         return f"User(id:{self.id}, name:{self.u_name},u_name:{self.u_name}, email:{self.email}, role:{self.role}, last_login:{self.last_login})"
+
+class RagDocuments(Base):
+    __tablename__ = 'rag_documents'
+
+    document_id: Mapped[int] = mapped_column("r_id", Integer, primary_key=True, autoincrement=True, nullable=False)
+    tenant_id: Mapped[int] = mapped_column("tenant_id", Integer, primary_key=True, autoincrement=True, nullable=False)
+    file_name: Mapped[str] = mapped_column("f_name", String, primary_key=True, autoincrement=True, nullable=False)
+    document_type: Mapped[str] = mapped_column("d_type", String, primary_key=True, autoincrement=True, nullable=False)
+    storage_path: Mapped[str] = mapped_column("d_path", String, primary_key=True, autoincrement=True, nullable=False)
+    status: Mapped[str] = mapped_column("r_id", String, primary_key=True, autoincrement=True, nullable=False)
+    created_at: Mapped[date] = mapped_column("created_at", Date, primary_key=True, autoincrement=True, nullable=False)
+
+    def __repr__(self) -> str:
+        return f"Document( document_id={self.document_id}, tenant_id={self.tenant_id}, file_name={self.file_name}, document_type={self.document_type}, storage_path={self.storage_path}, status={self.status}, created_at={self.created_at})>"
 
 Base.metadata.create_all(bind=engine)

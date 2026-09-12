@@ -7,7 +7,10 @@ from routers.department_routers import d_router
 from routers.employee_routers import e_router
 from routers.model_routers import m_routers
 from routers.product_routers import p_router
+from routers.rag_routers import r_router
 from routers.user_routers import u_router
+
+import os
 
 app = FastAPI()
 
@@ -30,6 +33,12 @@ app.include_router(
 )
 
 app.include_router(
+    r_router,
+    prefix="/rag",
+    tags=["rag"],
+)
+
+app.include_router(
     d_router,
     prefix="/department",
     tags=["department"]
@@ -47,8 +56,6 @@ app.include_router(
     tags=["models"]
 )
 
-
-
 app.include_router(
     u_router,
     prefix="/user",
@@ -56,9 +63,11 @@ app.include_router(
 )
 
 app.include_router(m_routers, prefix="/model", tags=["model"])
+
 @app.get("/")
 def health():
-    return {"message":"ok"}
+    return {"message" : "ok", "OPENAI_API_KEY" : os.getenv("OPENAI_API_KEY")}
+
 
 register_exception_handlers(app)
 

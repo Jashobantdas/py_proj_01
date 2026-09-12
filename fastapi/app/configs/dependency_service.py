@@ -11,6 +11,7 @@ from sqlalchemy.orm import Session
 
 from services.model_services import ModelServices
 from services.product_service import ProductService
+from services.rag_service import RagService
 from services.user_service import UserService
 
 
@@ -37,3 +38,6 @@ def get_product_service():
 
 def get_model_service():
     return ModelServices()
+
+def get_rag_service():
+    return RagService()

@@ -2,8 +2,11 @@ langchain
 langgraph
 langsmith
 langchain-community
-langchain-groq
+langchain-huggingface
+langchain-chroma
+langchain-openai
 fastapi
+pypdf
 uvicorn[standard]
 pydentic
 sqlalchemy
@@ -16,3 +19,4 @@ keras
 tensorflow
 joblib
 scikit-learn
+python-dotenv
